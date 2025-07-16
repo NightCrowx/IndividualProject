@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompareActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/compareui"
+        android:contentDescription="Background" />
+
+    <!-- Back Arrow Button -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icbuttonback"
+        android:contentDescription="Back"
+        android:scaleType="fitCenter"
+        android:layout_gravity="start|top"
+        app:tint="#0C0C0C" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginTop="48dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="24dp"
+            android:layout_marginTop="16dp">
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Compare Game"
+                android:fontFamily="casual"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Timer -->
+            <TextView
+                android:id="@+id/txtTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏳ 15s"
+                android:textColor="#D32F2F"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Number Cards with "VS." in the Middle -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="60dp">
+
+                <TextView
+                    android:id="@+id/txtNum1"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/rounded_card"
+                    android:gravity="center"
+                    android:textSize="40sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp" />
+
+                <TextView
+                    android:id="@+id/txtVs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VS."
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF5722"
+                    android:layout_marginHorizontal="10dp"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/txtNum2"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/rounded_card"
+                    android:gravity="center"
+                    android:textSize="40sp"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp" />
+            </LinearLayout>
+
+            <!-- Question Text -->
+            <TextView
+                android:id="@+id/txtQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Are 10 bigger or smaller than 25?"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:layout_marginTop="20dp" />
+
+            <!-- Bigger or Smaller Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="30dp">
+
+                <Button
+                    android:id="@+id/btnBig"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:text="Bigger"
+                    android:textSize="20sp"
+                    android:backgroundTint="#FFA726"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="20dp" />
+
+                <Button
+                    android:id="@+id/btnSmall"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:text="Smaller"
+                    android:textSize="20sp"
+                    android:backgroundTint="#42A5F5"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

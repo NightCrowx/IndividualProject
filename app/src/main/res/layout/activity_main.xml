@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Main Content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Background Image -->
+        <ImageView
+            android:id="@+id/backgroundImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mathfunui"
+            android:contentDescription="Background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Menu Button -->
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="Menu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:tint="#FFFFFF" />
+
+
+        <LinearLayout
+            android:id="@+id/centerContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent="0.75">
+
+            <ImageView
+                android:id="@+id/imgTitleLogo"
+                android:layout_width="353dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="1dp"
+                android:contentDescription="Math Fun Logo"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mathfunn" />
+
+            <Button
+                android:id="@+id/btnCompare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Compare Numbers"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/nav_button"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp" />
+
+            <Button
+                android:id="@+id/btnOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Order Numbers"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/nav_button"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp" />
+
+            <Button
+                android:id="@+id/btnCompose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Compose Numbers"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/nav_button"
+                android:textSize="18sp"
+                android:layout_marginTop="12dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#8097CAF3"
+        app:itemTextAppearance="@style/DrawerTextStyle"
+        app:itemTextColor="@color/white"
+        app:itemIconTint="@null"
+        app:menu="@menu/burger_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

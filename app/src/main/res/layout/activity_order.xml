@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".OrderActivity">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/orderui"
+        android:contentDescription="Background" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Arrange Game"
+                android:fontFamily="casual"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="30dp"/>
+
+            <TextView
+                android:id="@+id/txtLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose an Order to begin!!"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:layout_marginTop="20dp"/>
+
+            <!-- Level Selection Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="20dp">
+
+                <Button
+                    android:id="@+id/btnAscLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ascending"
+                    android:backgroundTint="#4CAF50"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="15dp"/>
+
+                <Button
+                    android:id="@+id/btnDescLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Descending"
+                    android:backgroundTint="#FF9800"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="15dp"/>
+            </LinearLayout>
+
+            <!-- Question Display -->
+            <TextView
+                android:id="@+id/txtQuestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/txtTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#D32F2F"
+                android:layout_marginBottom="12dp"/>
+
+
+            <!-- Option Buttons -->
+            <Button
+                android:id="@+id/btnOptionA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A. "
+                android:backgroundTint="#03A9F4"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="6dp"/>
+
+            <Button
+                android:id="@+id/btnOptionB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="B. "
+                android:backgroundTint="#03A9F4"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="6dp"/>
+
+            <Button
+                android:id="@+id/btnOptionC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="C. "
+                android:backgroundTint="#03A9F4"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="6dp"/>
+
+            <Button
+                android:id="@+id/btnOptionD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="D. "
+                android:backgroundTint="#03A9F4"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="6dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- Back Arrow Button -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icbuttonback"
+        android:contentDescription="Back"
+        android:layout_gravity="start|top"
+        app:tint="#000000" />
+</FrameLayout>

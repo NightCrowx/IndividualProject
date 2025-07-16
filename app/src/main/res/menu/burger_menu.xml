@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Title -->
+    <item
+        android:id="@+id/menu_title"
+        android:title="Math Fun"
+        android:enabled="false"
+        android:checkable="false"
+        android:titleCondensed=""
+        android:iconTint="@null" />
+
+    <!-- Divider (just a space) -->
+    <item android:title=" " />
+
+    <!-- Top Section -->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_compare"
+            android:title="➤ Compare Game" />
+
+        <item
+            android:id="@+id/nav_order"
+            android:title="➤ Order Game" />
+
+        <item
+            android:id="@+id/nav_compose"
+            android:title="➤ Compose Game" />
+    </group>
+
+    <!-- Divider -->
+    <item android:title=" " />
+
+    <!-- Exit Section -->
+    <item
+        android:id="@+id/nav_exit"
+        android:title="🚪 Exit"
+        android:orderInCategory="100" />
+</menu>

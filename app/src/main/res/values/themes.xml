@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.IndividualAssignment" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">#2196F3</item>
+        <item name="colorSecondary">#FFC107</item>
+        <item name="android:windowBackground">@drawable/mathfunn</item>
+    </style>
+
+    <style name="Theme.IndividualAssignment" parent="Base.Theme.IndividualAssignment" />
+</resources>
